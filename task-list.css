@@ -22,26 +22,67 @@ h1 {
   margin-right: auto;
 }
 
-#select-in-form {
+#form-select {
   display: flex;
   margin-bottom: 20px;
 }
 
-#date, #state-of-progress {
+#date, #select-progress {
   margin-right: 10px;
 }
 
 #button {
   background-color: #4445f5;
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
-#text-in-form {
+#form-text {
   margin-bottom: 20px;
   font-size: 18px;
 }
 
-#textarea-in-form {
+#form-textarea {
   font-size: 18px;
+}
+
+#task-area {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+#task-area tr {
+  height: 1.8em;
+}
+
+#task-area  th {
+  color: #ffffff;
+  background-color: #3d7576;
+}
+
+#task-area  th {
+  color: #ffffff;
+  background-color: #3d7576;
+}
+
+.table-month {
+  width: 100px;
+}
+
+.table-progress {
+  width: 60px;
+}
+
+.table-task-title {
+  width: 200px;
+}
+
+.table-task-summary {
+  width: 580px;
+}
+
+.table-delete-button {
+  width: 60px;
 }

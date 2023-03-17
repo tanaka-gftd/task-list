@@ -14,18 +14,30 @@
         <h1>期末面談用やったことリスト</h1>
         <form id="form-area">
             <p>実施月、進捗、タイトル、タスク概要を入力してください</p>
-            <div id="select-in-form">
+            <div id="form-select">
                 <input id="date" type="month" name="date">
-                <select id="state-of-progress" name="state-of-progress">
+                <select id="select-progress" name="select-progress">
                     <option value="completed">済</option>
                     <option value="inProgress">進行中</option>
                     <option value="notYet">未着手</option>
                 </select>
                 <button id="button" type="submit">登録</button>
             </div>
-            <input id="text-in-form" type="text" name="task-name" placeholder="タイトル">
-            <textarea id="textarea-in-form" name="" cols="30" rows="10" name="task-summary" placeholder="タスクの概要"></textarea>
+            <input id="form-text" type="text" name="task-name" placeholder="タイトル">
+            <textarea id="form-textarea" name="" cols="30" rows="10" name="task-summary" placeholder="タスクの概要"></textarea>
         </form>
+
+        <div id="task-area">
+            <table>
+                <tr>
+                    <th class="table-month">実施月</th>
+                    <th class="table-progress">進捗</th>
+                    <th class="table-task-title">タイトル</th>
+                    <th class="table-task-summary">タスク概要</th>
+                    <th class="table-delete-button">削除</th>
+                </tr>
+            </table>
+        </div>
     </body>
 
 </html>
