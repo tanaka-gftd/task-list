@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#body {
+  background-color: #e0edde;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+#form-area {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#select-in-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#date, #state-of-progress {
+  margin-right: 10px;
+}
+
+#button {
+  background-color: #4445f5;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+#text-in-form {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#textarea-in-form {
+  font-size: 18px;
+}
