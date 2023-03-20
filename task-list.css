@@ -57,18 +57,13 @@ h1 {
   height: 1.8em;
 }
 
-#task-area  th {
-  color: #ffffff;
-  background-color: #3d7576;
-}
-
-#task-area  th {
+#task-area th {
   color: #ffffff;
   background-color: #3d7576;
 }
 
 .table-month {
-  width: 100px;
+  width: 80px;
 }
 
 .table-progress {
