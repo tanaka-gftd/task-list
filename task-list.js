@@ -7,7 +7,7 @@ const formText = document.getElementById('form-text');
 const formTextarea = document.getElementById('form-textarea');
 const table = document.getElementById('table');
 
-//N予備校の課題の通り、タスクの保持は配列にて行うようにする
+//N予備校の課題の通り、タスクの保持は配列で行うようにする
 let taskList = [];
 
 
@@ -34,21 +34,31 @@ function submitTask(){
 
 
 //タスクをテーブル要素に追加して表示されるようにする関数
+//N予備校の課題の通り、登録のたびにタスクリストはいちから表示し直すようにする
 function createTaskListTable(){
 
-    //タスク表示用としてテーブルに新規行(tr要素)を追加し、そこにセル(td要素)も追加していく
-    let newRow = table.insertRow(-1);
-    let cellMonth = newRow.insertCell(0);
-    let cellSelectProgress = newRow.insertCell(1);
-    let cellFormText = newRow.insertCell(2);
-    let cellFormTextarea = newRow.insertCell(3);
+    //表示し直しのため、現在テーブル表示されているタスク一覧は一旦削除
+    //最終行削除を繰り返す
+    //(前回表示したものなので、テーブルの行数はひとつ少ない)
+    for (let i = 0; i < taskList.length - 1; i++){
+      table.deleteRow(-1);
+    };
 
-    //登録したタスクはtaskList配列の末尾に追加されているので、末尾のデータをテーブルに追加していく
-    if (taskList[taskList.length - 1]) {
-      cellMonth.appendChild(document.createTextNode(taskList[taskList.length - 1].month));
-      cellSelectProgress.appendChild(document.createTextNode(taskList[taskList.length - 1].selectProgress));
-      cellFormText.appendChild(document.createTextNode(taskList[taskList.length - 1].formText));
-      cellFormTextarea.appendChild(document.createTextNode(taskList[taskList.length - 1].formTextarea));
+    //タスクをテーブルに表示していく
+    for(let i = 0; i < taskList.length; i++){
+
+      //タスク表示用として、テーブルの最後の行の後に新規行(tr要素)を追加し、そこにセル(td要素)も追加していく
+      let newRow = table.insertRow(-1);
+      let cellMonth = newRow.insertCell(0);
+      let cellSelectProgress = newRow.insertCell(1);
+      let cellFormText = newRow.insertCell(2);
+      let cellFormTextarea = newRow.insertCell(3);
+
+      //テーブルのセル内に値を追加＆表示していく
+      cellMonth.appendChild(document.createTextNode(taskList[i].month));
+      cellSelectProgress.appendChild(document.createTextNode(taskList[i].selectProgress));
+      cellFormText.appendChild(document.createTextNode(taskList[i].formText));
+      cellFormTextarea.appendChild(document.createTextNode(taskList[i].formTextarea));
     };
 };
 
