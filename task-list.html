@@ -15,20 +15,20 @@
         <form id="form-area">
             <p>実施月、進捗、タイトル、タスク概要を入力してください</p>
             <div id="form-select">
-                <input id="month" type="month" name="month" required>
-                <select id="select-progress" name="select-progress">
+                <input id="select-month" type="month" required>
+                <select id="select-progress">
                     <option value="済">済</option>
                     <option value="進行中">進行中</option>
                     <option value="未着手">未着手</option>
                 </select>
-                <button id="button" type="button" onclick="submitTask()">登録</button>
+                <button id="register-button" type="button" onclick="registerTask()">登録</button>
             </div>
-            <input id="form-text" type="text" name="task-name" placeholder="タイトル" required>
-            <textarea id="form-textarea" name="" cols="30" rows="10" name="task-summary" placeholder="タスクの概要" required></textarea>
+            <input id="form-task-title" type="text" placeholder="タイトル" required>
+            <textarea id="form-task-summary" cols="30" rows="10" placeholder="タスクの概要" required></textarea>
         </form>
 
         <div id="task-area">
-            <table id="table">
+            <table id="task-table">
                 <tr>
                     <th class="table-month">実施月</th>
                     <th class="table-progress">進捗</th>
