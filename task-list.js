@@ -44,7 +44,7 @@ function registerTask(){
 
 //タスク一覧から、タスクを削除する処理
 //引数は削除ボタンのvalue属性の値
-function deleteTaskRow(num){
+function deleteTask(num){
 
     //課題で指定されている通り、表示し直しのため、現在テーブル表示されているタスク一覧は一旦削除
     //最終行削除を繰り返す
@@ -80,7 +80,7 @@ function createTaskListTable() {
     deleteButton.classList.add('delete-button');
     deleteButton.textContent = '削除';
     deleteButton.setAttribute('value', i);  //ここでのiが、taskList配列内のタスクのインデックスと同じ値になる
-    deleteButton.setAttribute('onclick', 'deleteTaskRow(value)');  //value属性とid属性は、onclickにセットした関数に引数として渡せる(今回はvalueで渡す)
+    deleteButton.setAttribute('onclick', 'deleteTask(value)');  //value属性とid属性は、onclickにセットした関数に引数として渡せる(今回はvalueで渡す)
     console.log(deleteButton);
 
     //テーブルのセル内に値を追加＆表示していく
