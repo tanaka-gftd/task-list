@@ -81,7 +81,6 @@ function createTaskListTable() {
     deleteButton.textContent = '削除';
     deleteButton.setAttribute('value', i);  //ここでのiが、taskList配列内のタスクのインデックスと同じ値になる
     deleteButton.setAttribute('onclick', 'deleteTask(value)');  //value属性とid属性は、onclickにセットした関数に引数として渡せる(今回はvalueで渡す)
-    console.log(deleteButton);
 
     //テーブルのセル内に値を追加＆表示していく
     cellMonth.appendChild(document.createTextNode(taskList[i].month));
